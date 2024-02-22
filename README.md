@@ -1,14 +1,12 @@
 # Walmart Sales Data Analysis
 
-## About
+## Introduction
 
-This project aims to explore the Walmart Sales data to understand top performing branches and products, sales trend of of different products, customer behaviour. The aims is to study how sales strategies can be improved and optimized. The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
+The objective of this project is to delve into Walmart Sales data, aiming to discern the top-performing branches and products, analyze the sales trends across various product categories, and understand customer behavior. The primary goal is to investigate opportunities for enhancing and optimizing sales strategies. The dataset utilized for this analysis was sourced from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
 
-"In this recruiting competition, job-seekers are provided with historical sales data for 45 Walmart stores located in different regions. Each store contains many departments, and participants must project the sales for each department in each store. To add to the challenge, selected holiday markdown events are included in the dataset. These markdowns are known to affect sales, but it is challenging to predict which departments are affected and the extent of the impact." [source](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting)
+## Objective
 
-## Purposes Of The Project
-
-The major aim of thie project is to gain insight into the sales data of Walmart to understand the different factors that affect sales of the different branches.
+The primary objective of this project is to acquire insights into Walmart's sales data, aiming to comprehend the various factors influencing the sales performance across its branches.
 
 ## About Data
 
@@ -34,81 +32,81 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 | gross_income            | Gross Income                            | DECIMAL(10, 2) |
 | rating                  | Rating                                  | FLOAT(2, 1)    |
 
-### Analysis List
+### Types of Analysis
 
 1. Product Analysis
 
-> Conduct analysis on the data to understand the different product lines, the products lines performing best and the product lines that need to be improved.
+> Perform an in-depth analysis of the data to gain insights into various product lines, identifying top-performing ones and areas for enhancement.
 
 2. Sales Analysis
 
-> This analysis aims to answer the question of the sales trends of product. The result of this can help use measure the effectiveness of each sales strategy the business applies and what modificatoins are needed to gain more sales.
+> The objective of this analysis is to discern sales trends for products. The findings will enable us to evaluate the efficacy of each sales strategy employed by the business and determine necessary adjustments to enhance sales.
 
 3. Customer Analysis
 
-> This analysis aims to uncover the different customers segments, purchase trends and the profitability of each customer segment.
+> This analysis seeks to unveil distinct customer segments, purchasing patterns, and the profitability associated with each segment.
 
-## Approach Used
+## Methodology
 
-1. **Data Wrangling:** This is the first step where inspection of data is done to make sure **NULL** values and missing values are detected and data replacement methods are used to replace, missing or **NULL** values.
+1. **Data Wrangling:** The initial stage involves examining the data to identify and handle NULL and missing values using appropriate replacement methods.
 
 > 1. Build a database
 > 2. Create table and insert the data.
 > 3. Select columns with null values in them. There are no null values in our database as in creating the tables, we set **NOT NULL** for each field, hence null values are filtered out.
 
-2. **Feature Engineering:** This will help use generate some new columns from existing ones.
+2. **Feature Engineering:** This step entails creating new columns derived from existing ones to provide additional insights.
 
-> 1. Add a new column named `time_of_day` to give insight of sales in the Morning, Afternoon and Evening. This will help answer the question on which part of the day most sales are made.
+> A. Introduce a column named time_of_day to categorize sales into Morning, Afternoon, and Evening periods, facilitating analysis of peak sales times.
 
-> 2. Add a new column named `day_name` that contains the extracted days of the week on which the given transaction took place (Mon, Tue, Wed, Thur, Fri). This will help answer the question on which week of the day each branch is busiest.
+> B. Incorporate a column named day_name to record the day of the week for each transaction (Mon, Tue, Wed, Thur, Fri), aiding in identifying the busiest days for each branch.
 
-> 3. Add a new column named `month_name` that contains the extracted months of the year on which the given transaction took place (Jan, Feb, Mar). Help determine which month of the year has the most sales and profit.
+> C. Integrate a column named month_name to indicate the month of each transaction (Jan, Feb, Mar), assisting in determining the most profitable months of the year.
 
-2. **Exploratory Data Analysis (EDA):** Exploratory data analysis is done to answer the listed questions and aims of this project.
+2. **Exploratory Data Analysis (EDA):** This phase involves investigating the data to address the project's objectives and questions.
 
 3. **Conclusion:**
 
-## Business Questions To Answer
+## Business Inquiries to Address
 
-### Generic Question
+### General Inquiries
 
-1. How many unique cities does the data have?
-2. In which city is each branch?
+1. How many distinct cities are represented in the dataset?
+2. Which city corresponds to each branch?
 
-### Product
+### Product Analysis
 
-1. How many unique product lines does the data have?
-2. What is the most common payment method?
-3. What is the most selling product line?
-4. What is the total revenue by month?
-5. What month had the largest COGS?
-6. What product line had the largest revenue?
-5. What is the city with the largest revenue?
-6. What product line had the largest VAT?
-7. Fetch each product line and add a column to those product line showing "Good", "Bad". Good if its greater than average sales
-8. Which branch sold more products than average product sold?
-9. What is the most common product line by gender?
-12. What is the average rating of each product line?
+1. How many distinct product lines are included in the dataset?
+2. What is the predominant payment method?
+3. Which product line sells the most units?
+4. What is the total revenue generated each month?
+5. Which month recorded the highest Cost of Goods Sold (COGS)?
+6. Which product line generated the highest revenue?
+7. Which city generated the highest revenue?
+8. Which product line incurred the highest VAT (Value Added Tax)?
+9. Retrieve each product line and append a column indicating "Good" or "Bad" based on whether its sales exceed the average.
+10. Which branch exceeded the average number of products sold?
+11. What is the most prevalent product line based on gender?
+12. What is the average rating for each product line?
 
-### Sales
+### Sales Insights
 
-1. Number of sales made in each time of the day per weekday
-2. Which of the customer types brings the most revenue?
-3. Which city has the largest tax percent/ VAT (**Value Added Tax**)?
-4. Which customer type pays the most in VAT?
+1. Count of sales transactions per time of day, categorized by weekday.
+2. Which customer type contributes the most to revenue?
+3. Which city has the highest percentage of tax or VAT (Value Added Tax)?
+4. Which customer type contributes the most to VAT payments?
 
-### Customer
+### Customer Profiling
 
-1. How many unique customer types does the data have?
-2. How many unique payment methods does the data have?
+1. How many distinct customer types are represented in the dataset?
+2. How many distinct payment methods are used by customers?
 3. What is the most common customer type?
-4. Which customer type buys the most?
-5. What is the gender of most of the customers?
-6. What is the gender distribution per branch?
-7. Which time of the day do customers give most ratings?
-8. Which time of the day do customers give most ratings per branch?
-9. Which day fo the week has the best avg ratings?
-10. Which day of the week has the best average ratings per branch?
+4. Which customer type makes the highest number of purchases?
+5. What is the predominant gender among customers?
+6. How is gender distributed across branches?
+7. During which time of day do customers provide the highest ratings?
+8. During which time of day, per branch, do customers provide the highest ratings?
+9. Which day of the week receives the highest average ratings?
+10. Which day of the week, per branch, receives the highest average ratings?
 
 
 ## Revenue And Profit Calculations
@@ -141,33 +139,3 @@ $ \text{VAT} = 5\% * COGS\\= 5\%  320.53 = 16.0265 $
 $ total = VAT + COGS\\= 16.0265 + 320.53 = $336.5565$
 
 $ \text{Gross Margin Percentage} = \frac{\text{gross income}}{\text{total revenue}}\\=\frac{16.0265}{336.5565} = 0.047619\\\approx 4.7619\% $
-
-## Code
-
-For the rest of the code, check the [SQL_queries.sql](https://github.com/Princekrampah/WalmartSalesAnalysis/blob/master/SQL_queries.sql) file
-
-```sql
--- Create database
-CREATE DATABASE IF NOT EXISTS walmartSales;
-
--- Create table
-CREATE TABLE IF NOT EXISTS sales(
-	invoice_id VARCHAR(30) NOT NULL PRIMARY KEY,
-    branch VARCHAR(5) NOT NULL,
-    city VARCHAR(30) NOT NULL,
-    customer_type VARCHAR(30) NOT NULL,
-    gender VARCHAR(30) NOT NULL,
-    product_line VARCHAR(100) NOT NULL,
-    unit_price DECIMAL(10,2) NOT NULL,
-    quantity INT NOT NULL,
-    tax_pct FLOAT(6,4) NOT NULL,
-    total DECIMAL(12, 4) NOT NULL,
-    date DATETIME NOT NULL,
-    time TIME NOT NULL,
-    payment VARCHAR(15) NOT NULL,
-    cogs DECIMAL(10,2) NOT NULL,
-    gross_margin_pct FLOAT(11,9),
-    gross_income DECIMAL(12, 4),
-    rating FLOAT(2, 1)
-);
-```
