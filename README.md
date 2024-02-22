@@ -62,9 +62,7 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 
 > C. Integrate a column named month_name to indicate the month of each transaction (Jan, Feb, Mar), assisting in determining the most profitable months of the year.
 
-2. **Exploratory Data Analysis (EDA):** This phase involves investigating the data to address the project's objectives and questions.
-
-3. **Conclusion:**
+3. **Exploratory Data Analysis (EDA):** This phase involves investigating the data to address the project's objectives and questions.
 
 ## Business Inquiries to Address
 
