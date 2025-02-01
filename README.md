@@ -109,31 +109,30 @@ The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition]
 
 ## Revenue And Profit Calculations
 
-$ COGS = unitsPrice * quantity $
+COGS = unitPrice * quantity
+𝑉𝐴𝑇 = 5% * 𝐶𝑂𝐺𝑆
 
-$ VAT = 5\% * COGS $
+VAT is added to the COGS and this is what is billed to the customer.
 
-$VAT$ is added to the $COGS$ and this is what is billed to the customer.
+Total (Gross Sales) = COGS + VAT
 
-$ total(gross_sales) = VAT + COGS $
-
-$ grossProfit(grossIncome) = total(gross_sales) - COGS $
+Gross Profit = Total(Gross Sales) − COGS
 
 **Gross Margin** is gross profit expressed in percentage of the total(gross profit/revenue)
 
-$ \text{Gross Margin} = \frac{\text{gross income}}{\text{total revenue}} $
+Gross Margin= Total Revenue / Gross Income ​
 
 <u>**Example with the first row in our DB:**</u>
 
 **Data given:**
 
-- $ \text{Unite Price} = 45.79 $
-- $ \text{Quantity} = 7 $
+- Unite Price = $45.79
+- Quantity = $7
 
-$ COGS = 45.79 * 7 = 320.53 $
+COGS = Unit Price * Quantity = 45.79 * 7 = $320.53
 
-$ \text{VAT} = 5\% * COGS\\= 5\%  320.53 = 16.0265 $
+VAT = 5% * COGS = 5% * 320.53
 
-$ total = VAT + COGS\\= 16.0265 + 320.53 = $336.5565$
+Total = VAT + COGS = 16.03 + 320.53 = 336.56
 
-$ \text{Gross Margin Percentage} = \frac{\text{gross income}}{\text{total revenue}}\\=\frac{16.0265}{336.5565} = 0.047619\\\approx 4.7619\% $
+Gross Margin Percentage = Total Revenue / Gross Income ​ = 336.5565 / 16.0265 ​ = 0.047619 ≈ 4.76 % (Approx)
